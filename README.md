@@ -1,24 +1,19 @@
-# 🛡️ NAS MasterX - NAS Monitoring & Repair System for Fedora Server
+# 🛡️ NAS MasterX v1.1 - NAS Monitoring & Repair System for Fedora Server
+**Fedora Bash License AI-Ready | Smart Performance Monitoring | Auto-Upgrade**
 
-![Fedora](https://img.shields.io/badge/Fedora-Compatible-blue)
-![Bash](https://img.shields.io/badge/Bash-Script-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-![AI-Ready](https://img.shields.io/badge/AI--Ready-Reports-orange)
+![Version](https://img.shields.io/badge/version-1.1-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 ## 📖 Overview
+NAS MasterX v1.1 is an intelligent, auto-detecting NAS monitoring system that provides enterprise-grade monitoring for home and small business users. It automatically detects your NAS configuration and creates custom monitoring scripts tailored to your specific setup.
 
-**NAS MasterX** is an intelligent, auto-detecting NAS monitoring system that provides enterprise-grade monitoring for home and small business users. It automatically detects your NAS configuration and creates custom monitoring scripts tailored to your specific setup.
-
-### 🎯 What Problem Does This Solve?
-
-If you've ever struggled with:
-- NAS suddenly running out of space
-- Mysterious performance issues
-- Uncertainty about disk health
-- Complex recovery procedures
-- Lack of clear monitoring tools
-
-**NAS MasterX solves these with AI-powered, automated monitoring!**
+### 🎯 What's New in v1.1
+- ✅ **Auto-Upgrade System** - Seamlessly upgrades from previous versions
+- ✅ **Smart Performance Monitoring** - Read/write speed benchmarking with thresholds
+- ✅ **File Tree Recording** - Preserves directory structure for data recovery
+- ✅ **Enhanced Log Management** - Automatic cleanup with intelligent viewing
+- ✅ **Comprehensive Stress Testing** - Validates installation thoroughly
+- ✅ **Improved Diagnostics** - Better hardware detection and reporting
 
 ## 🚀 Quick Start
 
@@ -26,9 +21,9 @@ If you've ever struggled with:
 - Fedora Server, RHEL, CentOS, or compatible Linux distribution
 - A mounted NAS/storage volume
 - sudo privileges
+- Minimum 200MB free space on NAS for performance tests
 
 ### Installation (One Command)
-
 ```bash
 # Download and run the installer
 sudo mkdir -p /opt/media_stack/NAS_MasterX
@@ -38,26 +33,39 @@ sudo chmod +x nas_masterx_installer.sh
 ./nas_masterx_installer.sh
 ```
 
-### What Happens During Installation?
-
-The installer will:
-1. **Auto-detect** your NAS configuration (LVM, XFS, EXT4, BTRFS, etc.)
-2. **Generate custom scripts** specifically for your system
-3. **Set up automated monitoring** that runs hourly
-4. **Create AI-ready reporting system**
-5. **Build interactive diagnostic tools**
+### 🆕 Auto-Upgrade Feature
+If you have a previous version installed, NAS MasterX v1.1 will:
+- Auto-detect existing installation
+- Safely uninstall previous version
+- Preserve your configuration
+- Install fresh v1.1 with all new features
 
 ## 🏗️ How It Works
 
 ### Architecture Overview
-
 ```
-NAS MasterX System
-├── 🔍 Auto-Detection Engine
+NAS MasterX System v1.1
+├── 🔄 Auto-Upgrade Engine
+│   ├── Detects existing installations
+│   ├── Safe uninstallation process
+│   └── Configuration preservation
+├── 🔍 Enhanced Auto-Detection
 │   ├── Scans for largest storage volume
 │   ├── Checks common mount points
 │   ├── Detects LVM configurations
 │   └── Identifies filesystem types
+├── ⚡ Performance Monitoring
+│   ├── Read/write speed benchmarking
+│   ├── Automatic threshold detection
+│   └── Disk health recommendations
+├── 🌲 File Tree Recording
+│   ├── Directory structure preservation
+│   ├── Recovery-ready documentation
+│   └── Tree-based or find-based generation
+├── 🧹 Smart Log Management
+│   ├── 7-day auto-cleanup
+│   ├── Enhanced log viewer
+│   └── Intelligent preview system
 ├── 🕵️ Monitoring Scripts
 │   ├── Health monitoring (filesystem, hardware, performance)
 │   └── AI-ready JSON reporting
@@ -69,132 +77,143 @@ NAS MasterX System
     └── AI report generation
 ```
 
-### Auto-Detection Process
+### Performance Thresholds
+| Metric | Warning Threshold | Critical Threshold | Action |
+|--------|-------------------|-------------------|--------|
+| Read Speed | < 50 MB/s | < 20 MB/s | Check disk health |
+| Write Speed | < 30 MB/s | < 10 MB/s | Consider replacement |
+| Disk Usage | > 80% | > 90% | Clean up data |
+| Inode Usage | > 80% | > 90% | Remove small files |
 
-The system uses multiple detection methods:
-
-1. **Largest Volume Detection** - Finds your biggest storage mount
-2. **Common Mount Points** - Checks `/mnt/nas`, `/storage`, `/media/nas`, etc.
-3. **LVM Detection** - Identifies Logical Volume Manager setups
-4. **Manual Fallback** - Asks for input if auto-detection fails
-
-## 📁 System Structure
-
-After installation, your system will have:
+## 📁 Enhanced System Structure
 
 ```
 /opt/media_stack/NAS_MasterX/
-├── 📄 nas_masterx_installer.sh     # Main installer
-├── 📖 README.md                    # This manual
+├── 📄 nas_masterx_installer.sh     # Main installer v1.1
+├── 📖 README.md                    # This enhanced manual
 ├── 🛠️ scripts/                     # Generated monitoring scripts
-│   ├── nas_health_monitor.sh       # Main health monitor
-│   └── nas_diagnostic_tool.sh      # Interactive diagnostics
-├── 📊 logs/                        # All logs and reports
+│   ├── nas_health_monitor.sh       # Enhanced health monitor
+│   └── nas_diagnostic_tool.sh      # Interactive diagnostics v1.1
+├── 📊 logs/                        # Smart log management
 │   ├── nas_health.log              # Detailed monitoring log
 │   ├── nas_health_status.json      # AI-ready health data
-│   └── ai_report_*.txt             # Generated AI reports
+│   ├── ai_report_*.txt             # Generated AI reports
+│   ├── performance_*.txt           # Speed test results
+│   └── file_tree_*.txt             # Directory structure
 └── ⚙️ config/
     └── nas_config.conf             # Your system configuration
 ```
 
-## 🔧 Usage Guide
+## 🔧 Enhanced Usage Guide
 
 ### Basic Commands
-
 ```bash
-# Run manual health check
+# Run manual health check (now with performance testing)
 sudo /opt/media_stack/NAS_MasterX/scripts/nas_health_monitor.sh
 
-# Use interactive diagnostic tool
+# Use enhanced diagnostic tool
 sudo /opt/media_stack/NAS_MasterX/scripts/nas_diagnostic_tool.sh
 
 # Check automated monitoring status
 sudo systemctl status nas-masterx-monitor.timer
 ```
 
-### Interactive Diagnostic Tool
-
-Run the diagnostic tool for a user-friendly interface:
-
+### 🆕 Enhanced Diagnostic Tool Menu
+Run the diagnostic tool for the improved user interface:
 ```bash
 sudo /opt/media_stack/NAS_MasterX/scripts/nas_diagnostic_tool.sh
 ```
 
-You'll see a menu with options:
-- **1. Quick Health Status** - Instant system overview
-- **2. Generate AI Analysis Report** - Create AI-ready report
-- **3. View Log Files** - Browse all generated logs
-- **4. Check Hardware Details** - Storage device information
-- **5. Filesystem Information** - Mount and usage details
-- **6. Run Full Health Check** - Comprehensive system check
+**New Menu Options:**
+1. **Quick Health Status** - Instant system overview
+2. **Generate AI Analysis Report** - Create AI-ready report
+3. **View Log Files (Enhanced)** - Smart log viewer with auto-preview
+4. **Check Hardware Details** - Storage device information
+5. **Filesystem Information** - Mount and usage details
+6. **Run Full Health Check** - Comprehensive system check
+7. **🆕 Performance Test Only** - Run speed benchmarks
+8. **🆕 Generate File Tree Only** - Create directory structure report
 
 ## 🤖 AI Integration Guide
 
 ### Getting AI Assistance
+When you encounter issues, NAS MasterX v1.1 makes AI assistance even simpler:
 
-When you encounter issues, NAS MasterX makes AI assistance simple:
+**Generate Enhanced AI Report:**
+```bash
+sudo /opt/media_stack/NAS_MasterX/scripts/nas_diagnostic_tool.sh
+# Choose option 2: "Generate AI Analysis Report"
+```
 
-1. **Generate AI Report:**
-   ```bash
-   sudo /opt/media_stack/NAS_MasterX/scripts/nas_diagnostic_tool.sh
-   # Choose option 2: "Generate AI Analysis Report"
-   ```
+**Share with AI:**
+1. Copy the generated report content
+2. Paste into your AI assistant (DeepSeek, ChatGPT, etc.)
+3. Use this enhanced prompt:
 
-2. **Share with AI:**
-   - Copy the generated report content
-   - Paste into your AI assistant (DeepSeek, ChatGPT, etc.)
-   - Use this prompt:
-   ```
-   Here's my NAS health report. Please analyze and provide specific recovery steps:
-   
-   [PASTE REPORT CONTENT]
-   
-   My main symptoms: [describe what you're experiencing]
-   ```
+```text
+Here's my NAS health report from NAS MasterX v1.1. Please analyze and provide specific recovery steps:
 
-3. **Direct JSON Analysis:**
-   ```bash
-   # For technical AI analysis
-   cat /opt/media_stack/NAS_MasterX/logs/nas_health_status.json | jq .
-   ```
+[PASTE REPORT CONTENT]
 
-### Example AI Prompt
+My main symptoms: [describe what you're experiencing]
+Consider the performance metrics and file structure in your analysis.
+```
 
-> "Analyze this NAS health report. The system shows disk space at 85% usage and I'm experiencing slow file transfers. Provide step-by-step cleanup and optimization recommendations focusing on data preservation."
+### 🆕 Enhanced AI Report Includes:
+- Performance test results with speed analysis
+- File structure summary for recovery planning
+- Smart threshold-based recommendations
+- Hardware health status with SMART data
+- Historical trend analysis
 
 ## 📊 Understanding Outputs
 
-### Log Files & Their Purpose
+### 🆕 Enhanced Log Files & Their Purpose
+| Log File | Purpose | AI Ready | Retention | New in v1.1 |
+|----------|---------|----------|-----------|-------------|
+| nas_health_status.json | Structured health data | ✅ Yes | 7 days | Enhanced |
+| ai_report_*.txt | Pre-formatted AI reports | ✅ Yes | 7 days | Performance data |
+| performance_*.txt | Speed test results | ✅ Yes | 7 days | ✅ New |
+| file_tree_*.txt | Directory structure | ⚠️ No | 7 days | ✅ New |
+| nas_health.log | Detailed monitoring activity | ⚠️ No | 7 days | Enhanced |
 
-| Log File | Purpose | AI Ready | Retention |
-|----------|---------|----------|-----------|
-| `nas_health_status.json` | Structured health data | ✅ Yes | 7 days |
-| `ai_report_*.txt` | Pre-formatted AI reports | ✅ Yes | 7 days |
-| `nas_health.log` | Detailed monitoring activity | ⚠️ No | 7 days |
+### 🆕 Health Status Levels
+| Status | Description | Action Required |
+|--------|-------------|-----------------|
+| ✅ HEALTHY | All systems normal | No action needed |
+| ⚠️ WARNING | Minor issues detected | Monitor closely |
+| 🚨 CRITICAL | Performance degradation | Immediate attention |
+| 💀 FAILED | Hardware failure detected | Replace hardware |
 
-### Health Status Levels
-
-- ✅ **HEALTHY** - All systems normal, no action needed
-- ⚠️ **WARNING** - Minor issues detected, monitor closely
-- ❌ **CRITICAL** - Immediate attention required
-
-### What Gets Monitored
-
-**Filesystem Health:**
+### 🆕 What Gets Monitored in v1.1
+**Enhanced Filesystem Health:**
 - Mount status verification
 - Disk usage with warning thresholds (80% warning, 90% critical)
 - Inode usage tracking
 - Filesystem-specific checks (XFS, EXT4, BTRFS, ZFS)
 
+**New Performance Monitoring:**
+- Read/write speed benchmarking
+- Automatic performance threshold detection
+- Disk health recommendations
+- Speed degradation tracking
+
+**🆕 File Structure Preservation:**
+- Directory tree generation
+- File count and structure documentation
+- Recovery-ready structure reports
+
 **Hardware Monitoring:**
 - Block device detection
 - SMART health status (if smartmontools installed)
 - Storage device information
+- Performance-based health assessment
 
 **System Integration:**
 - Automated hourly checks via systemd
 - Journal logging for debugging
 - Structured JSON outputs for AI analysis
+- Automatic log cleanup
 
 ## 🗺️ Where to Find Everything
 
@@ -205,6 +224,12 @@ cd /opt/media_stack/NAS_MasterX/logs/
 
 # Latest AI report (most recent)
 ls -lt /opt/media_stack/NAS_MasterX/logs/ai_report_*.txt | head -1
+
+# 🆕 Latest performance report
+ls -lt /opt/media_stack/NAS_MasterX/logs/performance_*.txt | head -1
+
+# 🆕 Latest file tree report
+ls -lt /opt/media_stack/NAS_MasterX/logs/file_tree_*.txt | head -1
 
 # Health status data
 cat /opt/media_stack/NAS_MasterX/logs/nas_health_status.json | jq .
@@ -224,17 +249,16 @@ sudo systemctl cat nas-masterx-monitor.service
 
 ### Script Locations
 ```bash
-# Main monitoring script
+# Main monitoring script (enhanced)
 /opt/media_stack/NAS_MasterX/scripts/nas_health_monitor.sh
 
-# Diagnostic tool
+# Diagnostic tool (enhanced)
 /opt/media_stack/NAS_MasterX/scripts/nas_diagnostic_tool.sh
 ```
 
-## 🆘 Troubleshooting Guide
+## 🆕 Enhanced Troubleshooting Guide
 
 ### Common Issues & Solutions
-
 **❌ "Permission Denied" during installation**
 ```bash
 # Ensure you're not running as root user
@@ -264,35 +288,39 @@ sudo systemctl restart nas-masterx-monitor.timer
 sudo systemctl daemon-reload
 ```
 
-**❌ "Scripts not executable"**
+**❌ "Performance test failing"**
 ```bash
-# Fix permissions
-sudo chmod +x /opt/media_stack/NAS_MasterX/scripts/*.sh
+# Check available space
+df -h /opt/media_stack/NAS_MasterX/
+
+# Ensure NAS has enough space (200MB+ recommended)
+df -h $NAS_MOUNT
 ```
 
-### Installation Failure Recovery
+### 🆕 Installation Failure Recovery
+If installation fails during stress testing:
 
-If installation fails:
+1. **Check the specific failed test**
+2. **Review installation logs**
+3. **Manual cleanup if needed:**
+```bash
+sudo systemctl stop nas-masterx-monitor.timer
+sudo systemctl disable nas-masterx-monitor.timer
+sudo rm -f /etc/systemd/system/nas-masterx-monitor.*
+sudo systemctl daemon-reload
+sudo rm -rf /opt/media_stack/NAS_MasterX/scripts/
+```
 
-1. **Check the stage** where it failed
-2. **Manual cleanup** if needed:
-   ```bash
-   sudo systemctl stop nas-masterx-monitor.timer
-   sudo systemctl disable nas-masterx-monitor.timer
-   sudo rm -f /etc/systemd/system/nas-masterx-monitor.*
-   sudo systemctl daemon-reload
-   sudo rm -rf /opt/media_stack/NAS_MasterX/scripts/
-   ```
+4. **Re-run installer after cleanup**
 
-3. **Re-run installer** after cleanup
-
-### Emergency Recovery Steps
-
+### 🆕 Emergency Recovery Steps
 1. **Don't panic** - Your data is likely safe
-2. **Generate AI report** using diagnostic tool
-3. **Share with AI** for guided recovery
-4. **Follow instructions** carefully
-5. **Backup data** before major changes
+2. **Generate enhanced AI report** using diagnostic tool
+3. **Check file tree structure** for recovery planning
+4. **Review performance metrics** for hardware issues
+5. **Share with AI** for guided recovery
+6. **Follow instructions carefully**
+7. **Backup data** before major changes
 
 ## 🔄 Maintenance & Updates
 
@@ -309,69 +337,83 @@ sudo systemctl status nas-masterx-monitor.timer
 sudo systemctl list-timers nas-masterx-monitor.timer
 ```
 
-### Log Management
+### 🆕 Enhanced Log Management
 - Logs auto-rotate with 7-day retention
+- Automatic cleanup of old performance and tree reports
 - No manual cleanup needed
 - JSON format maintained for AI compatibility
 
-### Updating the System
+### 🆕 Updating the System
 ```bash
 cd /opt/media_stack/NAS_MasterX
 sudo ./nas_masterx_installer.sh
-# The installer will update existing installation
+# The installer will auto-detect and upgrade existing installation
 ```
 
 ## 🎯 What to Expect
 
-### After Successful Installation
-
+### After Successful Installation v1.1
 **Immediate Results:**
 - ✅ Custom monitoring scripts generated for your system
 - ✅ Automated hourly health checks enabled
 - ✅ Initial health report created
-- ✅ Interactive diagnostic tool available
+- ✅ Performance baseline established
+- ✅ File tree structure documented
+- ✅ Enhanced diagnostic tool available
 
 **Ongoing Monitoring:**
 - 📊 Hourly system health checks
+- ⚡ Performance trend monitoring
+- 🌲 Regular file structure updates
 - 🤖 AI-ready reports generated on demand
 - 📈 Historical health data maintained
 - 🔔 Automatic issue detection
 
-### Normal Operation Signs
-
+### 🆕 Normal Operation Signs
 **Healthy System Indicators:**
-- Service status: `active (waiting)`
-- Timer: `enabled`
+- Service status: active (waiting)
+- Timer: enabled
 - Logs: New files generated hourly
+- Performance: Speed within thresholds
 - Reports: Clean bill of health in AI reports
 
-**Warning Signs:**
-- Service status: `inactive` or `failed`
+**🆕 Warning Signs:**
+- Service status: inactive or failed
 - No new log files
-- Error messages in diagnostic tool
+- Performance degradation alerts
 - High disk usage warnings
+- Slow read/write speeds
 
-## 🔍 Advanced Features
+## 🆕 Advanced Features
 
 ### Custom Configuration
 Edit `/opt/media_stack/NAS_MasterX/config/nas_config.conf` for:
 - Custom monitoring intervals
 - Additional mount points
+- Performance threshold adjustments
 - Specific health check parameters
+- Log retention periods
 
 ### Manual Health Checks
 ```bash
-# Run comprehensive check
+# Run comprehensive check (now with performance testing)
 sudo /opt/media_stack/NAS_MasterX/scripts/nas_health_monitor.sh
 
 # Check specific components
 sudo /opt/media_stack/NAS_MasterX/scripts/nas_diagnostic_tool.sh
+
+# 🆕 Run performance test only
+sudo /opt/media_stack/NAS_MasterX/scripts/nas_diagnostic_tool.sh
+# Choose option 7
 ```
 
 ### Integration with Other Tools
 ```bash
 # Use with monitoring systems
 cat /opt/media_stack/NAS_MasterX/logs/nas_health_status.json | jq '.health_status'
+
+# 🆕 Performance monitoring integration
+cat /opt/media_stack/NAS_MasterX/logs/performance_*.txt | grep "Speed"
 
 # Schedule custom checks
 crontab -e
@@ -381,14 +423,14 @@ crontab -e
 ## 🤝 Support & Community
 
 ### Getting Help
-
 1. **Check this manual first** - Most issues are covered here
-2. **Use the diagnostic tool** - It provides specific error information
+2. **Use the enhanced diagnostic tool** - It provides specific error information
 3. **Generate AI report** - Get AI-powered troubleshooting
 4. **Check service logs** - Detailed technical information
+5. **Review performance metrics** - Identify hardware issues
 
 ### System Information
-- **Version**: 1.0
+- **Version**: 1.1
 - **Compatibility**: Fedora Server, RHEL, CentOS, Rocky Linux
 - **License**: MIT
 - **Support**: GitHub Issues
@@ -403,40 +445,51 @@ crontab -e
 ### Data Preservation First
 - All operations are read-only when possible
 - No automatic repairs without confirmation
+- File tree structure preserved for recovery
 - Full system snapshot recommended before risky operations
 
-### When Things Go Wrong
+### 🆕 When Things Go Wrong
 1. **Stop automated monitoring:**
-   ```bash
-   sudo systemctl stop nas-masterx-monitor.timer
-   ```
+```bash
+sudo systemctl stop nas-masterx-monitor.timer
+```
 
-2. **Generate detailed report:**
-   ```bash
-   sudo /opt/media_stack/NAS_MasterX/scripts/nas_diagnostic_tool.sh
-   ```
+2. **Generate enhanced report:**
+```bash
+sudo /opt/media_stack/NAS_MasterX/scripts/nas_diagnostic_tool.sh
+```
 
-3. **Seek AI assistance** with the generated report
-4. **Follow AI guidance** step by step
-5. **Resume monitoring** after resolution
+3. **Check file tree structure** for data recovery planning
 
----
+4. **Review performance metrics** for hardware issues
 
-<div align="center">
+5. **Seek AI assistance** with the generated report
+
+6. **Follow AI guidance** step by step
+
+7. **Resume monitoring** after resolution
 
 ## 🎉 Ready to Protect Your NAS?
 
-**NAS MasterX** - *Because your data deserves the best protection* 🛡️
+**NAS MasterX v1.1** - Because your data deserves intelligent protection with performance monitoring 🛡️⚡
 
-**Get started in 3 simple steps:**
-1. Download the installer
-2. Run `./nas_masterx_installer.sh` 
-3. Let AI handle the rest!
+### Get started in 3 simple steps:
+1. **Download** the enhanced installer
+2. **Run** `./nas_masterx_installer.sh`
+3. **Let AI and performance monitoring** handle the rest!
 
 [⬇️ Download Now] • [📖 View Source] • [🐛 Report Issues]
 
-</div>
-
 ---
 
-*NAS MasterX: Automated monitoring meets AI-powered troubleshooting for worry-free NAS management.*
+**NAS MasterX v1.1**: Automated monitoring meets AI-powered troubleshooting and performance intelligence for worry-free NAS management.
+
+### 🆕 Version 1.1 Highlights
+- 🚀 **Auto-Upgrade** from previous versions
+- ⚡ **Performance Intelligence** with smart thresholds
+- 🌲 **Data Recovery Ready** file tree documentation
+- 🧹 **Smart Log Management** with auto-cleanup
+- 🔧 **Enhanced Diagnostics** with stress testing
+- 🤖 **AI-Optimized** reporting with performance data
+
+**Your NAS has never been smarter!** 🧠
