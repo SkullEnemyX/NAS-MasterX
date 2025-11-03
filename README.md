@@ -1,4 +1,4 @@
-# 🛡️ NAS MasterX - Universal NAS Monitoring & Repair System
+# 🛡️ NAS MasterX - NAS Monitoring & Repair System for Fedora Server
 
 ![Fedora](https://img.shields.io/badge/Fedora-Compatible-blue)
 ![Bash](https://img.shields.io/badge/Bash-Script-green)
